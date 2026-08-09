@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #173b16, #4d8c27);
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#game {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background: rgba(0,0,0,.35);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  color: #ffe600;
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 8px;
+}
+
+#stats {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: rgba(0,0,0,.4);
+  border-radius: 15px;
+  padding: 12px 20px;
+  min-width: 120px;
+  font-weight: bold;
+}
+
+.stat span {
+  color: #ffe600;
+  font-size: 22px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#farm,
+#shop,
+#missions {
+  background: rgba(0,0,0,.35);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#tree {
+  font-size: 100px;
+  margin: 20px;
+  position: relative;
+}
+
+#fruit {
+  font-size: 35px;
+  position: absolute;
+  left: 52%;
+  top: 15px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 15px;
+  padding: 16px;
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ffe600;
+  color: #173b16;
+}
+
+button:active {
+  transform: scale(.96);
+}
+
+#message {
+  margin-top: 15px;
+  color: #ffe600;
+  font-weight: bold;
+}
+
+#missions {
+  margin-top: 15px;
+}
+
+#mission {
+  margin-top: 10px;
+}
+
+@media (max-width: 650px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  #tree {
+    font-size: 85px;
+  }
+}
