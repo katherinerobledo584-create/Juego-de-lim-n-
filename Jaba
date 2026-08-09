@@ -1,0 +1,71 @@
+let money = 50;
+let lemons = 0;
+let trees = 1;
+
+const moneyText = document.getElementById("money");
+const lemonsText = document.getElementById("lemons");
+const treesText = document.getElementById("trees");
+const message = document.getElementById("message");
+const mission = document.getElementById("mission");
+
+document.getElementById("harvestBtn").addEventListener("click", () => {
+  const amount = trees * 2;
+
+  lemons += amount;
+
+  message.textContent =
+    "🍋 ¡Cosechaste " + amount + " limones!";
+
+  update();
+});
+
+document.getElementById("sellBtn").addEventListener("click", () => {
+  if (lemons <= 0) {
+    message.textContent = "❌ No tienes limones para vender.";
+    return;
+  }
+
+  const earned = lemons * 5;
+
+  money += earned;
+  lemons = 0;
+
+  message.textContent =
+    "💰 ¡Vendiste los limones por $" + earned + "!";
+
+  update();
+});
+
+document.getElementById("upgradeBtn").addEventListener("click", () => {
+  if (money < 100) {
+    message.textContent =
+      "❌ Necesitas $100 para comprar otro árbol.";
+    return;
+  }
+
+  money -= 100;
+  trees++;
+
+  message.textContent =
+    "🌳 ¡Compraste un nuevo árbol!";
+
+  update();
+});
+
+function update() {
+  moneyText.textContent = money;
+  lemonsText.textContent = lemons;
+  treesText.textContent = trees;
+
+  if (lemons >= 10) {
+    mission.textContent =
+      "✅ ¡Misión completada! Consigue 25 limones.";
+  }
+
+  if (lemons >= 25) {
+    mission.textContent =
+      "🏆 ¡Granjero experto! ¡Sigue vendiendo!";
+  }
+}
+
+update();
