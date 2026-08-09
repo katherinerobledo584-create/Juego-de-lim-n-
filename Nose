@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <title>🍋 Juego de Limones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="game">
+
+    <header>
+      <h1>🍋 JUEGO DE LIMONES</h1>
+      <p>¡Cosecha, vende y mejora tu negocio!</p>
+    </header>
+
+    <section id="stats">
+      <div class="stat">💰 Dinero<br><span id="money">50</span></div>
+      <div class="stat">🍋 Limones<br><span id="lemons">0</span></div>
+      <div class="stat">🌳 Árboles<br><span id="trees">1</span></div>
+    </section>
+
+    <main>
+
+      <div id="farm">
+        <h2>🌳 Tu huerto</h2>
+
+        <div id="tree">
+          🌳
+          <div id="fruit">🍋</div>
+        </div>
+
+        <button id="harvestBtn">🍋 COSECHAR</button>
+      </div>
+
+      <div id="shop">
+        <h2>🏪 Tienda</h2>
+
+        <button id="sellBtn">
+          💰 Vender limones
+        </button>
+
+        <button id="upgradeBtn">
+          🌳 Comprar árbol — $100
+        </button>
+
+        <p id="message">¡Empieza a cosechar!</p>
+      </div>
+
+    </main>
+
+    <section id="missions">
+      <h2>🎯 Misiones</h2>
+      <p id="mission">
+        🍋 Consigue 10 limones
+      </p>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
